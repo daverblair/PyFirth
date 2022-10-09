@@ -33,3 +33,11 @@ Here is a simple example made by binarizing some continuous data to create rare 
     print('Firth Logistic Regression Marriage Rating (Beta, SE, P): {0:.2f}, {1:.2f}, {2:.2e}'.format(firth_output['ParamTable'].loc['rate_marriage']['BETA'],firth_output['ParamTable'].loc['rate_marriage']['SE'],firth_output['PVal']))
 
 ```
+
+``` 
+Optimization terminated successfully.
+         Current function value: 0.037929
+         Iterations 12
+Logistic Regression Marriage Rating (Beta, SE, P): -0.79, 0.13, 3.85e-10
+Firth Logistic Regression Marriage Rating (Beta, SE, P): -0.78, 0.12, 2.17e-09
+```
