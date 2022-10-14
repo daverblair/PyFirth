@@ -5,7 +5,7 @@ import copy
 from scipy import stats
 from scipy import special
 
-__version__ = "0.0.2"
+__version__ = "0.0.3"
 
 def logsig(x):
     """Compute the log-sigmoid function component-wise."""
