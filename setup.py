@@ -4,7 +4,7 @@ import re
 
 version = re.search(
     '^__version__\s*=\s*"(.*)"',
-    open('PyFirth/PyFirth.py').read(),
+    open('pyfirth/PyFirth.py').read(),
     re.M).group(1)
 
 
@@ -15,17 +15,17 @@ with open("README.md", "r") as fh:
 
 
 setuptools.setup(
-    name="PyFirth",
+    name="pyfirth",
     version=version,
     author="David Blair",
     author_email="david.blair@ucsf.edu",
-    description="A very simple, inefficient implemention of Firth-penalized Logistic Regression for rare event data."
+    description="A very simple, inefficient implemention of Firth-penalized Logistic Regression for rare event data.",
     long_description_content_type="text/markdown",
     url="https://github.com/daverblair/PyFirth",
     packages=setuptools.find_packages(),
     install_requires=[
         'numpy',
-        'pandas,
+        'pandas',
         'scipy',
         'statsmodels',
         ],

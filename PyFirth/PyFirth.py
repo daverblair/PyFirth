@@ -22,7 +22,7 @@ def logsig(x):
 
 
 
-class PyFirth:
+class PyFirth():
 
     def firth_likelihood(self,beta):
         """
@@ -166,6 +166,7 @@ class PyFirth:
                 new_beta[blocking_vec]+=np.matmul(var_covar_mat, U).T.ravel()
             # step halving
             j = 0
+
             while self.firth_likelihood(new_beta) < self.firth_likelihood(beta_iterations[i]):
 
                 new_beta = beta_iterations[i] + 0.5*(new_beta - beta_iterations[i])
@@ -178,9 +179,9 @@ class PyFirth:
                     else:
                         raise ValueError("Unable to find parameter vector to optimize likelihood on first iteration. Try increasing step_limit.")
             beta_iterations.append(new_beta)
-            if (np.linalg.norm(beta_iterations[-1] - beta_iterations[-2]) < convergence_limit):
+            if (np.linalg.norm(beta_iterations[-1][blocking_vec] - beta_iterations[-2][blocking_vec]) < convergence_limit):
                 break
-        if np.linalg.norm(beta_iterations[-1] - beta_iterations[-2]) >= convergence_limit:
+        if np.linalg.norm(beta_iterations[-1][blocking_vec] - beta_iterations[-2][blocking_vec]) >= convergence_limit:
             raise ValueError('Firth regression failed failed to converge in {0:d} iterations. Consider increasing iteration number.\n'.format(i+1))
         else:
             fitll = self.firth_likelihood(beta_iterations[-1])

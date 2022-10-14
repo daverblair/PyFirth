@@ -1,6 +1,6 @@
-# PyFirth
+# pyfirth
 
-The <code>PyFirth</code> package implements a very basic Firth-penalized logistic regression model for rare event data. There are likely more efficient and versatile methods out there.
+The <code>pyfirth</code> package implements a very basic Firth-penalized logistic regression model for rare event data. There are likely more efficient and versatile methods out there.
 
 ## Dependencies
 
@@ -19,6 +19,9 @@ pip install PyFirth
 Here is a simple example made by binarizing some continuous data to create rare event data. Note, the Firth-penalized model is slightly more conservative.
 
 ``` python
+    from pyfirth.PyFirth import PyFirth 
+    import statsmodels.api as sm
+
     dta = sm.datasets.fair.load_pandas().data
 
     #create a rare count dataset by binning affair time into extreme not extreme
