@@ -12,7 +12,7 @@ The <code>pyfirth</code> package implements a very basic Firth-penalized logisti
 ## Installation
 
 The software package can be installed using pip by running the following command:
-pip install PyFirth
+pip install pyfirth
 
 ##  Example
 
