@@ -4,7 +4,7 @@ import re
 
 version = re.search(
     '^__version__\s*=\s*"(.*)"',
-    open('pyfirth/pyfirth.py').read(),
+    open('pyfirth/PyFirth.py').read(),
     re.M).group(1)
 
 

@@ -2,6 +2,8 @@ LICENSE
 README.md
 pyproject.toml
 setup.py
+pyfirth/PyFirth.py
+pyfirth/__init__.py
 pyfirth.egg-info/PKG-INFO
 pyfirth.egg-info/SOURCES.txt
 pyfirth.egg-info/dependency_links.txt
